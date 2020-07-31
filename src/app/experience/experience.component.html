@@ -1,0 +1,36 @@
+<app-header-other-nav [titleHeader]="titleHeader"></app-header-other-nav>
+<main class="container experience-container global-author-presentation" [ngClass]="{hideOnSideNav:navBarVisibilityService.hideOnSideNav==true}">
+    <blockquote>
+        <p class="presentation">Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+        </p>
+        <p class="presentation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu
+            fugiat nulla pariatur
+        </p>
+    </blockquote>
+    <h2 class="under-section-title">Skills</h2>
+    <section class="global-programming-languages-knowledge-presentation">
+        <div class="global-article-knowledge-presentation">
+            <article class="article-card" *ngFor="let article of experienceArticles">
+                <figcaption>
+                    <div class="article-icon"><i class="{{article.fa}}"></i></div>
+                    <div class="article-title-link">{{article.title}}</div>
+                    <p class="article-info-knowledge">
+                        {{article.info}}
+                    </p>
+                    <div class="read-more-button">
+                        <a>Read more</a>
+                    </div>
+                </figcaption>
+            </article>
+        </div>
+    </section>
+    <input type="submit" class="home-btn" value="Home" (click)="goTo()">
+</main>
+<app-footer></app-footer>

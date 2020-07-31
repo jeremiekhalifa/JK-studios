@@ -1,0 +1,38 @@
+[
+    { 
+        "id": "Home",
+        "fa": "fa fa-2x fas fa-home",
+        "name": "Home",
+        "url": "home"
+    },
+    {
+        "id": "Projects",
+        "fa": "fa fa-2x fas fa-code",
+        "name": "Projects",
+        "url": "projects"
+    },
+    {
+        "id": "JavaScript",
+        "fa": "fab fa-2x fa-js-square",
+        "name": "JavaScript",
+        "url": "javascript"
+    },
+    {
+        "id": "Angular",
+        "fa": "fab fa-2x fa-angular",
+        "name": "Angular",
+        "url": "angular"
+    },
+    {
+        "id": "CSS",
+        "fa": "fa fa-2x fas fa-css3",
+        "name": "CSS",
+        "url": "css"
+    },
+    {
+        "id": "NodeJS",
+        "fa": "fab fa-2x fa-node-js",
+        "name": "NodeJS",
+        "url": "node"
+    }
+]

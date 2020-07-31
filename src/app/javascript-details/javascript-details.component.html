@@ -1,0 +1,41 @@
+<article class="details-container" [ngClass]="{hideOnSideNav:navBarVisibilityService.hideOnSideNav==true}">
+    <header class="container">
+        <div class="title">
+            <h1 class="section-title">{{javascriptDetailsArticle.content.title | uppercase}}</h1>
+            <div class="closing-button" (click)="goBack()"><i class="fa fa-2x fas fa-times"></i></div>
+        </div>
+    </header>
+
+    <main class="article-explanations">
+        <div class="container">
+            <div class="explanations">
+                <div class="intro" *ngIf="javascriptDetailsArticle.content.intro">
+                    <h2 class="title-intro">Intro</h2>
+                    {{javascriptDetailsArticle.content.intro}}
+                </div>
+                <div class="problem" *ngIf="javascriptDetailsArticle.content.problem">
+                    <h2 class="title-problem">Problem</h2>
+                    {{javascriptDetailsArticle.content.problem}}
+                </div>
+                <div class="solution" *ngIf="javascriptDetailsArticle.content.solution">
+                    <h2 class="title-solution">Solution</h2>
+                    {{javascriptDetailsArticle.content.solution}}
+                </div>
+                <div class="resume" *ngIf="javascriptDetailsArticle.content.resume">
+                    <h2 class="title-resume">Resume</h2>
+                    {{javascriptDetailsArticle.content.resume}}
+                </div>
+            </div>
+        </div>
+
+        <svg class="svg-separator separator-down curveUp" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+            height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+        </svg>
+        <svg class="svg-separator separator-up curveDown" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+            height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+        </svg>
+    </main>
+</article>
+<app-footer></app-footer>

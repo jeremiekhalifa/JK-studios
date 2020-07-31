@@ -1,0 +1,24 @@
+<app-header [titleHeader]="titleHeader" 
+            [subtitleHeader]="subtitleHeader" 
+            [presentationHeader]="presentationHeader">
+</app-header>
+<main class="angular-container svg-container global-article-container" [ngClass]="{hideOnSideNav:navBarVisibilityService.hideOnSideNav==true}">
+    <section class="container global-angular-presentation global-article-presentation block-start-on-mobile block-start-on-desktop">
+        <article class="article-guide" *ngFor="let article of angularArticles">
+            <app-main [articleTitle]="article.title" 
+                      [articleInfo]="article.info" 
+                      [articleLink]="articleLink + article.id">
+            </app-main>
+        </article>
+    </section>
+    <img class="design-shape" src="../../assets/img/img/svg-design-shape.svg" alt="">
+    <svg class="svg-separator separator-down curveUp curveUpMainPage" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+        height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+    </svg>
+    <svg class="svg-separator separator-up curveDown curveDownMainPage" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+        height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+    </svg>
+</main>
+<app-footer></app-footer>

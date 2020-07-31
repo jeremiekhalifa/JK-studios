@@ -1,0 +1,11 @@
+$background: #121212;
+
+:host {
+    background-image: 
+        radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), $background),
+        url(../../assets/img/logo/gradient-logo.svg);
+    background-repeat: no-repeat;
+    background-position: 60% 140px;
+    background-size: 900px;
+    display: block;
+}

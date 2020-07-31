@@ -1,0 +1,32 @@
+[
+    { 
+        "id": "About",
+        "fa": "fa fa-2x fas fa-user",
+        "name": "About",
+        "url": "about"
+    },
+    {
+        "id": "Experience",
+        "fa": "fa fa-2x fas fa-briefcase",
+        "name": "Experience",
+        "url": "experience"
+    },
+    {
+        "id": "Education",
+        "fa": "fa fa-2x fas fa-university",
+        "name": "Education",
+        "url": "education"
+    },
+    {
+        "id": "Other",
+        "fa": "fa fa-2x fas fa-feather",
+        "name": "Other",
+        "url": "other"
+    },
+    {
+        "id": "Contact",
+        "fa": "fa fa-2x fas fa-file-signature",
+        "name": "Contact",
+        "url": "contact"
+    }
+]
