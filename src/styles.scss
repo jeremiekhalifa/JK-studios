@@ -782,11 +782,10 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
         margin-block-start: 200px;
         .global-article-presentation {
             position: relative;
-            // Article Info
-            .article-info {
+            .article-presentation {
                 padding-block-start: $standardSpace;
                 font-size: 20px;
-                .summary {
+                .article-welcome {
                     letter-spacing: 1px;
                     .hidden-part {
                         width: 0;
@@ -863,8 +862,8 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
                         right: 30px;
                         bottom: $bigSpace;
                         left: 30px;
-                        border-top: 1px solid $light-pink;
-                        border-bottom: 1px solid $light-pink;
+                        border-top: 2px solid $light-pink;
+                        border-bottom: 2px solid $light-pink;
                         -webkit-transform: scale(0, 1);
                         transform: scale(0, 1);
                         -webkit-transform-origin: 0 0;
@@ -875,8 +874,8 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
                         right: $bigSpace;
                         bottom: 30px;
                         left: $bigSpace;
-                        border-right: 1px solid $light-pink;
-                        border-left: 1px solid $light-pink;
+                        border-right: 2px solid $light-pink;
+                        border-left: 2px solid $light-pink;
                         -webkit-transform: scale(1, 0);
                         transform: scale(1, 0);
                         -webkit-transform-origin: 100% 0;
@@ -994,7 +993,7 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
                 width: 100%;
                 height: 100%;
                 background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), $background),
-                    url(./assets/img/logo/gradient-logo.svg);
+                    url(./assets/img/img/programming-html.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
                 opacity: 0.5;
@@ -1115,8 +1114,8 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
             right: 30px;
             bottom: $bigSpace;
             left: 30px;
-            border-top: 1px solid #fff;
-            border-bottom: 1px solid #fff;
+            border-top: 2px solid $light-pink;
+            border-bottom: 2px solid $light-pink;
             -webkit-transform: scale(0, 1);
             transform: scale(0, 1);
             -webkit-transform-origin: 0 0;
@@ -1127,8 +1126,8 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
             right: $bigSpace;
             bottom: 30px;
             left: $bigSpace;
-            border-right: 1px solid #fff;
-            border-left: 1px solid #fff;
+            border-right: 2px solid $light-pink;
+            border-left: 2px solid $light-pink;
             -webkit-transform: scale(1, 0);
             transform: scale(1, 0);
             -webkit-transform-origin: 100% 0;
@@ -1180,8 +1179,8 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                height: 3px;
-                background: #fff;
+                height: 2px;
+                background: $light-pink;
                 content: "";
                 -webkit-transition: -webkit-transform 0.35s;
                 transition: transform 0.35s;
@@ -1249,7 +1248,7 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
             left: 30px;
             height: -webkit-calc(50% - 30px);
             height: calc(50% - 30px);
-            border: 7px solid #fff;
+            border: 2px solid $light-pink;
             content: "";
             -webkit-transition: -webkit-transform 0.35s;
             transition: transform 0.35s;
@@ -1305,7 +1304,7 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
             right: 30px;
             bottom: 30px;
             left: 30px;
-            border: 2px solid #fff;
+            border: 2px solid $light-pink;
             box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
             content: "";
             opacity: 0;
