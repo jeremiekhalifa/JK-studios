@@ -1,6 +1,8 @@
+$background: #1E2334;
+
 :host {
     background-image: 
-        radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #121212),
+        radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), $background),
         url(../../assets/img/img/coding-effect.jpg);
     background-repeat: no-repeat;
     background-position: 85% 0;
