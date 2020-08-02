@@ -1,7 +1,7 @@
 <!-- <section class="material-design-bar"></section> -->
 <nav class="top-nav-container" id="topNavContainer">
     <section class="logo">
-        <div class="toggle-btn" (click)="statusSideNav()">
+        <div class="toggle-btn" (click)="statusSideNav($event)">
             <i class="fa fa-2x fas fa-bars" [ngClass]="sideNavToggle ? 'barsTransformed' : ''"></i>
             <i class="fa fa-2x fas fa-times" [ngClass]="sideNavToggle ? 'timesTransformed' : ''"></i>
         </div>
@@ -9,7 +9,7 @@
     </section>
     <ul class="top-nav-links with-indicator">
         <li class="top-nav-link" id="{{link.id}}" *ngFor="let link of topNavLinks; let i = index"
-            (click)="statusTopNavLink = i ; goTo(link.url)" [class.top-nav-link-cliked]="statusTopNavLink == i"
+            (click)="statusTopNavLink = i ; goTo(link.url, $event)" [class.top-nav-link-cliked]="statusTopNavLink == i"
             (mouseover)="link[i] = true" (mouseleave)="link[i] = false">
             <i class="{{link.fa}}"></i>
             <a>{{link.name}}</a>

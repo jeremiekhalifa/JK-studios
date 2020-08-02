@@ -10,7 +10,10 @@ import { SIDENAV } from '../mock-info/nav-bar'
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  styleUrls: ['./nav-bar.component.scss'],
+  host: {
+    "(window:click)": "closeFromOutside()"
+  }
 })
 export class NavBarComponent implements OnInit {
   /* Maybe for the future, to work with JSON files */
@@ -43,7 +46,8 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  statusSideNav() {
+  statusSideNav($event) {
+    $event.stopPropagation();
     this.sideNavToggle = !this.sideNavToggle;
     if (this.sideNavToggle) {
       this.navBarVisibilityService.hideOnSideNav = true;
@@ -52,7 +56,12 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  goTo(url: string) {
+  closeFromOutside() {
+    this.navBarVisibilityService.hideOnSideNav = false;
+    this.sideNavToggle = false;
+  }
+
+  goTo(url: string, section) {
     if (this.sideNavToggle) {
       this.sideNavToggle = false;
       this.navBarVisibilityService.hideOnSideNav = false;

@@ -27,8 +27,8 @@ $dark-green: #00701a;
 // -webkit-text-fill-color: transparent;
 
 // Themes
-$background: #1E2334;
-$surface: #2C3049;
+$background: #1e2334;
+$surface: #2c3049;
 $primary: #000;
 $secondary: #fff;
 $light-font-color: #cfd8dc;
@@ -245,15 +245,18 @@ a {
 
 @media screen and (max-width: 950px) {
     .icon {
-        background: linear-gradient(90deg, $light-orange ,$light-pink, $light-purple);
+        background: linear-gradient(90deg, $light-orange, $light-pink, $light-purple);
         position: fixed;
         bottom: 30px;
         right: 30px;
-        padding: 20px;
+        padding: 15px;
         border-radius: 50%;
         color: $white;
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
         z-index: 1000000;
+        i {
+            font-size: 30px;
+        }
     }
 }
 
@@ -446,27 +449,9 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
     color: $white;
     font-size: 16px;
     z-index: 100;
-    transition: all 0.6s ease-in-out;
-    &:hover #Home i {
-        color: $light-orange;
-    }
-    &:hover #Projects i {
-        color: $light-pink;
-    }
-    &:hover #JavaScript i {
-        color: $light-purple;
-    }
-    &:hover #Angular i {
-        color: $light-red;
-    }
-    &:hover #CSS i {
-        color: $light-blue;
-    }
-    &:hover #NodeJS i {
-        color: $light-green;
-    }
-    ul {
-        margin: 0;
+    transition: all 0.2s ease-in-out !important;
+    &:hover .top-nav-links i {
+        color: $light-font-color;
     }
     .logo {
         display: flex;
@@ -513,7 +498,7 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
         max-width: 720px;
         padding: 0;
         width: 100%;
-        transition: all 0.2s ease-in-out !important;
+        transition: all 0.2s ease-in-out;
         .top-nav-link {
             display: flex;
             flex-direction: column;
@@ -522,15 +507,12 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
             padding: 25px;
             background: $background;
             width: $width;
-            transition: all 0.2s ease-in-out !important;
+            transition: all 0.2s ease-in-out;
             cursor: pointer;
-            &:hover {
-                color: $white;
-            }
             i {
                 padding-block-end: 10px;
                 font-size: 30px;
-                transition: all .2s ease-in-out;
+                transition: background-image 0.2s ease-in-out;
             }
         }
         .top-nav-link-cliked i {
@@ -605,6 +587,7 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
 
 .top-nav-container-toggled {
     height: 100%;
+    transition: all .2s ease-in-out;
     .top-nav-links {
         display: flex;
     }
@@ -622,21 +605,6 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
     font-size: 16px;
     z-index: 100;
     transition: all 0.2s ease-in-out;
-    &:hover #About i {
-        color: $dark-orange;
-    }
-    &:hover #Experience i {
-        color: $dark-pink;
-    }
-    &:hover #Education i {
-        color: $light-purple;
-    }
-    &:hover #Other i {
-        color: $light-blue;
-    }
-    &:hover #Contact i {
-        color: $light-green;
-    }
     ul {
         padding-block-start: 80px;
         .side-nav-link {
@@ -657,11 +625,14 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
                 margin-left: $standardSpace;
                 font-size: 20px;
                 border-radius: 50%;
-                transition: all .2s ease-in-out;
+                transition: all 0.2s ease-in-out;
             }
         }
         .side-nav-link-cliked {
             background: $light-pink;
+            color: $white !important;
+        }
+        .side-nav-link-cliked i {
             color: $white !important;
         }
     }
@@ -682,7 +653,7 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
 
 @media screen and (max-width: 950px) {
     .side-nav-container {
-        top: 138px;
+        top: 143px;
     }
 }
 
@@ -1416,7 +1387,7 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
             background: $surface;
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
             z-index: 1;
-            transition: all .2s ease-in-out;
+            transition: all 0.2s ease-in-out;
             &:hover {
                 transform: translateY(-5px);
             }
