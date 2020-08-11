@@ -587,7 +587,7 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
 
 .top-nav-container-toggled {
     height: 100%;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     .top-nav-links {
         display: flex;
     }
@@ -926,48 +926,6 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
 }
 
 /* ==========================================================================
-                                PROJECTS
-   ========================================================================== 
-*/
-
-// Projects
-.projects-container {
-    .global-projects-presentation {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-        grid-gap: 6rem 4rem;
-        .article-guide {
-            z-index: 1;
-            .img {
-                background: linear-gradient(150deg, $light-orange, $light-pink, $light-purple);
-                padding: 100px;
-                border-radius: 15px;
-            }
-            .article-card {
-                .article-title {
-                    margin: -3rem 1rem 0;
-                    background: $surface;
-                    position: relative;
-                    text-transform: capitalize;
-                    padding: 1rem 1rem 0.5rem;
-                    border-radius: 15px;
-                    color: $white;
-                    transition: all 0.2s ease-in-out;
-                }
-                .article-content {
-                    margin: 0 2rem;
-                    margin-block-end: 15px;
-                    overflow-wrap: break-word;
-                }
-                .read-more {
-                    margin: 0 2rem;
-                }
-            }
-        }
-    }
-}
-
-/* ==========================================================================
                         GLOBAL ARTICLE STRUCTURE
    ========================================================================== 
 */
@@ -1076,6 +1034,84 @@ $menu-items-loop-offset: $menu-items - 1; // Number of items in the menu
             left: 0;
             bottom: -100px;
         }
+    }
+}
+
+/* ==========================================================================
+                                PROJECTS
+   ========================================================================== 
+*/
+
+.projects-container {
+    .article-card {
+        figcaption {
+            h2 {
+                font-size: 158.75%;
+            }
+            h2,
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                transition: opacity 0.35s, transform 0.35s;
+                -webkit-transform: translate3d(-50%, -50%, 0);
+                transform: translate3d(-50%, -50%, 0);
+                -webkit-transform-origin: 50%;
+                transform-origin: 50%;
+            }
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                text-transform: none;
+                font-size: 24px;
+                line-height: 2;
+                opacity: 0;
+                transition: 0.2s ease-in-out;
+                a {
+                    color: #fff;
+                    
+                }
+                a:hover,
+                a:focus {
+                    opacity: 0.6;
+                }
+            }
+        }
+        figcaption::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            border: 2px solid $light-pink;
+            content: "";
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+            transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+            -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+        }
+    }
+
+    .article-card:hover figcaption::before {
+        opacity: 1;
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+        transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+    }
+
+    .article-card:hover h2 {
+        opacity: 0;
+        -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+        transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+    }
+
+    .article-card:hover p {
+        opacity: 1;
     }
 }
 

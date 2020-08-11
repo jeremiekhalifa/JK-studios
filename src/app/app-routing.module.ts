@@ -42,7 +42,7 @@ const routes: Routes = [
   { path: 'test', component: TestComponent },
 
   // Details Components
-  { path: 'project-details/:id', component: ProjectsDetailsComponent },
+  { path: 'projects-details/:id', component: ProjectsDetailsComponent },
   { path: 'javascript-details/:id', component: JavascriptDetailsComponent },
   { path: 'angular-details/:id', component: AngularDetailsComponent },
   { path: 'css-details/:id', component: CssDetailsComponent },

@@ -2,21 +2,16 @@
             [subtitleHeader]="subtitleHeader" 
             [presentationHeader]="presentationHeader">
 </app-header>
-<main class="projects-container svg-container" [ngClass]="{hideOnSideNav:navBarVisibilityService.hideOnSideNav==true}">
-    <section class="container  global-projects-presentation block-start-on-mobile block-start-on-desktop">
+<main class="projects-container svg-container global-article-container" [ngClass]="{hideOnSideNav:navBarVisibilityService.hideOnSideNav==true}">
+    <section class="container global-projects-presentation global-article-presentation block-start-on-mobile block-start-on-desktop">
         <article class="article-guide" *ngFor="let article of projectsList">
-            <div class="img"></div>
-            <section class="article-card">
-                <h2 class="article-title">
-                    <a class="article-title-link" routerLink="/project-details/{{article.id}}">{{article.title}}</a>
-                </h2>
-                <div class="article-content">
-                    {{article.precontent}}
-                </div>
-                <span class="read-more" routerLink="/project-details/{{article.id}}">Read more</span>
-            </section>
+            <app-main [articleTitle]="article.title" 
+                      [articleInfo]="article.info" 
+                      [articleLink]="articleLink + article.id">
+            </app-main>
         </article>
     </section>
+    <img class="design-shape" src="../../assets/img/img/svg-design-shape.svg" alt="">
     <svg class="svg-separator separator-down curveUp curveUpMainPage" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
         height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
         <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
